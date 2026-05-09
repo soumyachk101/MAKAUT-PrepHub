@@ -1,5 +1,5 @@
-◇ injected env (0) from .env // tip: ⌘ override existing { override: true }
-MongoDB Memory Server connected at mongodb://127.0.0.1:46479/
-Seeded 3 subjects
-Seeded 5 materials
+◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+MongoDB Memory Server connected at mongodb://127.0.0.1:39439/
+Seeded 27 subjects
+Seeded 94 materials
 Server running on port 5000
