@@ -22,10 +22,17 @@ const Material = require('./models/Material');
 async function start() {
   const mongod = await MongoMemoryServer.create();
   const uri = mongod.getUri();
+<<<<<<< HEAD
 
   await mongoose.connect(uri);
   console.log('MongoDB Memory Server connected at', uri);
 
+=======
+
+  await mongoose.connect(uri);
+  console.log('MongoDB Memory Server connected at', uri);
+
+>>>>>>> b5a406b (initial commit)
   // Seed the DB
   const subjects = [
     // Semester 1 & 2 (Common)
@@ -88,7 +95,11 @@ async function start() {
 
   const createdMaterials = await Material.insertMany(materials);
   console.log(`Seeded ${createdMaterials.length} materials`);
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> b5a406b (initial commit)
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
   });

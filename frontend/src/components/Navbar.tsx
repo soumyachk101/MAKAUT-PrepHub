@@ -14,9 +14,18 @@ export default function Navbar() {
               <span className="font-bold text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-indigo-700 tracking-tight">PrepHub</span>
             </Link>
           </div>
+<<<<<<< HEAD
 
+=======
+
+<<<<<<< HEAD
+>>>>>>> b5a406b (initial commit)
+          <div className="flex items-center flex-1 justify-center px-2 lg:ml-6 lg:justify-end">
+            <div className="max-w-lg w-full lg:max-w-xs relative">
+=======
           <div className="flex items-center flex-1 justify-end px-2 lg:ml-6">
             <div className="max-w-lg w-full lg:max-w-xs relative group">
+>>>>>>> bc6247e (style: improve UI and add MAKAUT subjects)
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <Search className="h-4 w-4 text-gray-400 group-focus-within:text-blue-500 transition-colors" />
               </div>
