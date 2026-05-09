@@ -15,11 +15,7 @@ function SubjectsList() {
   const searchParams = useSearchParams();
   const branch = searchParams.get('branch');
   const sem = searchParams.get('sem');
-<<<<<<< HEAD
 
-=======
-
->>>>>>> b5a406b (initial commit)
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [loading, setLoading] = useState(!!(branch && sem));
 
@@ -103,18 +99,9 @@ function SubjectsList() {
         </div>
       ) : (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-<<<<<<< HEAD
-          {subjects.map(subject => (
-<<<<<<< HEAD
-            <Link
-              key={subject._id}
-=======
-=======
           {subjects.map((subject, idx) => (
->>>>>>> bc6247e (style: improve UI and add MAKAUT subjects)
             <Link
               key={subject._id}
->>>>>>> b5a406b (initial commit)
               href={`/subjects/${subject._id}`}
               className="group block bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
               style={{ animationDelay: `${idx * 50}ms` }}
