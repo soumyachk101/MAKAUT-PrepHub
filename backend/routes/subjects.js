@@ -27,7 +27,7 @@ router.get('/', applyRateLimit, async (req, res) => {
     }
 
     if (sem) {
-      const semester = Number.parseInt(sem, 10);
+      const semester = parseInt(sem, 10);
       if (!Number.isInteger(semester) || semester < 1 || semester > 8) {
         return res.status(400).json({ message: 'Invalid semester.' });
       }

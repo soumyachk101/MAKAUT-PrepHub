@@ -1,5 +1,6 @@
 const ALL_BRANCHES = ['CSE', 'IT', 'ECE', 'EE', 'ME', 'CE'];
 const CSE_IT = ['CSE', 'IT'];
+const PRACTICAL_KEYWORDS = ['Lab', 'Seminar', 'Project', 'Training', 'Viva'];
 
 const subjects = [
   { subjectCode: 'BS-M101', name: 'Engineering Mathematics-I', branch: ALL_BRANCHES, semester: 1, syllabusDetails: 'Calculus, matrices, vector algebra and differential equations' },
@@ -233,7 +234,7 @@ const subjects = [
 ];
 
 const buildMaterials = subjectsList => subjectsList.flatMap(subject => {
-  const isPractical = /(lab|seminar|project|training|viva)/i.test(subject.name);
+  const isPractical = PRACTICAL_KEYWORDS.some(keyword => subject.name.includes(keyword));
 
   const materials = [
     {
