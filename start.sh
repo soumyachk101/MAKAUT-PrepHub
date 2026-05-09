@@ -13,7 +13,7 @@ curl -s http://localhost:3000 | grep -q "PrepHub" && echo "✅ Frontend Homepage
 
 # Test Backend Subjects API
 echo "Testing Backend Subjects API..."
-curl -s http://localhost:5000/api/subjects | grep -q "CS401" && echo "✅ Backend Subjects API is returning data" || echo "❌ Backend Subjects API failed"
+curl -s http://localhost:5000/api/subjects | grep -q "PCC-CS301" && echo "✅ Backend Subjects API is returning data" || echo "❌ Backend Subjects API failed"
 
 kill $BACKEND_PID
 kill $FRONTEND_PID
