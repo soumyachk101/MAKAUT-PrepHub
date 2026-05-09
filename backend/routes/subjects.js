@@ -1,26 +1,17 @@
 const express = require('express');
+const { rateLimit } = require('express-rate-limit');
+
 const router = express.Router();
 const Subject = require('../models/Subject');
 
 const VALID_BRANCHES = new Set(['CSE', 'IT', 'ECE', 'EE', 'ME', 'CE']);
-const RATE_LIMIT_WINDOW_MS = 60 * 1000;
-const RATE_LIMIT_MAX_REQUESTS = 60;
-const requestLog = new Map();
-
-const applyRateLimit = (req, res, next) => {
-  const clientKey = req.ip || req.socket.remoteAddress || 'unknown';
-  const now = Date.now();
-  const existingWindow = requestLog.get(clientKey) || [];
-  const activeWindow = existingWindow.filter(timestamp => now - timestamp < RATE_LIMIT_WINDOW_MS);
-
-  if (activeWindow.length >= RATE_LIMIT_MAX_REQUESTS) {
-    return res.status(429).json({ message: 'Too many requests. Please try again later.' });
-  }
-
-  activeWindow.push(now);
-  requestLog.set(clientKey, activeWindow);
-  next();
-};
+const applyRateLimit = rateLimit({
+  windowMs: 60 * 1000,
+  limit: 60,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { message: 'Too many requests. Please try again later.' },
+});
 
 // GET /api/subjects?branch=CSE&sem=4
 router.get('/', applyRateLimit, async (req, res) => {

@@ -232,7 +232,7 @@ const subjects = [
   { subjectCode: 'OEC-CE801', name: 'Internship and Viva Voce', branch: ['CE'], semester: 8, syllabusDetails: 'Professional training, report writing and final viva voce' },
 ];
 
-const buildMaterials = createdSubjects => createdSubjects.flatMap(subject => {
+const buildMaterials = subjectsList => subjectsList.flatMap(subject => {
   const isPractical = /(lab|seminar|project|training|viva)/i.test(subject.name);
 
   const materials = [
