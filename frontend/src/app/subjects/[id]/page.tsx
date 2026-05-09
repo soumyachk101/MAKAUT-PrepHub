@@ -15,7 +15,11 @@ export default function SubjectDetailsPage() {
   const params = useParams();
   const router = useRouter();
   const id = params.id as string;
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> b5a406b (initial commit)
   const [materials, setMaterials] = useState<Material[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -63,10 +67,19 @@ export default function SubjectDetailsPage() {
   };
 
   return (
+<<<<<<< HEAD
+    <div className="space-y-6">
+      <div className="flex items-center space-x-4">
+<<<<<<< HEAD
+        <button
+=======
+=======
     <div className="space-y-8 animate-in fade-in duration-500">
       {/* Header section */}
       <div className="flex items-center space-x-4 pb-4 border-b border-gray-200">
+>>>>>>> bc6247e (style: improve UI and add MAKAUT subjects)
         <button
+>>>>>>> b5a406b (initial commit)
           onClick={() => router.back()}
           className="p-2.5 rounded-full hover:bg-gray-100 transition-colors bg-white shadow-sm border border-gray-200 group"
           aria-label="Go back"
@@ -117,10 +130,20 @@ export default function SubjectDetailsPage() {
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-3 sm:ml-auto pl-14 sm:pl-0">
+<<<<<<< HEAD
+                  <div className="flex items-center space-x-2">
+<<<<<<< HEAD
                     <a
                       href={material.fileUrl}
                       target="_blank"
+=======
+=======
+                  <div className="flex items-center space-x-3 sm:ml-auto pl-14 sm:pl-0">
+>>>>>>> bc6247e (style: improve UI and add MAKAUT subjects)
+                    <a
+                      href={material.fileUrl}
+                      target="_blank"
+>>>>>>> b5a406b (initial commit)
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 px-3 py-2 border border-gray-300 rounded-lg shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
                       title="View Document"
@@ -128,7 +151,11 @@ export default function SubjectDetailsPage() {
                       <Eye className="h-4 w-4" />
                       <span className="hidden sm:inline">View</span>
                     </a>
+<<<<<<< HEAD
                     <a
+=======
+                    <a
+>>>>>>> b5a406b (initial commit)
                       href={material.fileUrl}
                       download
                       className="inline-flex items-center gap-1.5 px-3 py-2 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
