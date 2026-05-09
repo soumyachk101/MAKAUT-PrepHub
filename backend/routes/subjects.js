@@ -6,15 +6,10 @@ const Subject = require('../models/Subject');
 router.get('/', async (req, res) => {
   try {
     const { branch, sem } = req.query;
-    let filter = {};
+    const filter = {};
     if (branch) filter.branch = branch;
     if (sem) filter.semester = Number(sem);
-<<<<<<< HEAD
-
-=======
-
->>>>>>> b5a406b (initial commit)
-    const subjects = await Subject.find(filter);
+    const subjects = await Subject.find(filter).sort({ subjectCode: 1, name: 1 });
     res.json(subjects);
   } catch (error) {
     res.status(500).json({ message: error.message });
