@@ -23,7 +23,7 @@ router.get('/', applyRateLimit, async (req, res) => {
       if (typeof branch !== 'string' || !VALID_BRANCHES.has(branch)) {
         return res.status(400).json({ message: 'Invalid branch.' });
       }
-      filter.branch = branch;
+      filter.branch = { $in: [branch] };
     }
 
     if (sem) {
