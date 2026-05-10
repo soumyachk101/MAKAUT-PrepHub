@@ -8,6 +8,4 @@ const subjectSchema = new mongoose.Schema({
   syllabusDetails: { type: String }
 });
 
-subjectSchema.index({ subjectCode: 1, name: 1 });
-
 module.exports = mongoose.model('Subject', subjectSchema);

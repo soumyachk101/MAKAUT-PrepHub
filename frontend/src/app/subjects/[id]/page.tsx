@@ -15,6 +15,7 @@ export default function SubjectDetailsPage() {
   const params = useParams();
   const router = useRouter();
   const id = params.id as string;
+
   const [materials, setMaterials] = useState<Material[]>([]);
   const [loading, setLoading] = useState(true);
 

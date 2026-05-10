@@ -15,6 +15,7 @@ function SubjectsList() {
   const searchParams = useSearchParams();
   const branch = searchParams.get('branch');
   const sem = searchParams.get('sem');
+
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [loading, setLoading] = useState(!!(branch && sem));
 
