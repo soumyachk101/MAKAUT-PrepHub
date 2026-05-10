@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   try {
     const { branch, sem } = req.query;
     let filter = {};
-    if (branch) filter.branch = branch;
+    if (branch) filter.branch = { $in: [branch] }; // use $in to match if the branch is in the array
     if (sem) filter.semester = Number(sem);
 
     const subjects = await Subject.find(filter);

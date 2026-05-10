@@ -1,5 +1,0 @@
-◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }
-MongoDB Memory Server connected at mongodb://127.0.0.1:45109/
-Seeded 27 subjects
-Seeded 95 materials
-Server running on port 5000
